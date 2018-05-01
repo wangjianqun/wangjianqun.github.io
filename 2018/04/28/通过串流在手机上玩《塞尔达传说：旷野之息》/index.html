@@ -96,7 +96,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p7r1v01hf.bkt.clouddn.com/switchphone1.webp">
 <meta property="og:image" content="http://p7r1v01hf.bkt.clouddn.com/switchphone2.webp">
-<meta property="og:updated_time" content="2018-04-28T11:51:25.768Z">
+<meta property="og:updated_time" content="2018-05-01T12:31:08.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="通过串流在手机上玩《塞尔达传说：旷野之息》">
 <meta name="twitter:description" content="前言首先说明，这篇文章纯粹以技术方法方面分析，并不是推荐你通过这个方法玩盗版游戏，且最终的游戏体验也说明了用该方法的游戏体验并不好，因此建议有条件的朋友最好还是买switch来玩《塞尔达传说：旷野之息》。">
@@ -418,7 +418,7 @@
       
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先说明，这篇文章纯粹以技术方法方面分析，并不是推荐你通过这个方法玩盗版游戏，且最终的游戏体验也说明了用该方法的游戏体验并不好，因此建议有条件的朋友最好还是买switch来玩《塞尔达传说：旷野之息》。<br><a id="more"></a></p>
 <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>前段时间在网上无聊到处逛逛时，突然看到可以用wiiU模拟器玩《塞尔达传说：旷野之息》（以下统称旷野之息），这才知道了wiiU已经被破解了。出于对wiiU的好奇，便去进一步查找资料，偶然在贴吧里看到有人发了个帖子，他通过串流+模拟器实现了在手机上玩《旷野之息》，看着他发的游玩视频，联想到自己还没有switch，所以想到要是可以在手机上玩上《旷野之息》，体验一下switch玩游戏的感觉，那该有多刺激啊（其实就是为了装会逼）。于是便开始了试验。</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>此处用的wiiU模拟器是cemu，我下载的版本是已经整合了游戏以及游戏图形包的版本，下载地址在此。而模拟器的使用方法下载页面有很详细的教程，在此不赘述，要想串流需确保下载的这个版本cemu在自己电脑上能加载游戏缓存，并能成功进入游戏，因为是要利用英伟达显卡驱动的串流功能（要把显卡驱动更新到最新版），所以需要打开NVIDIA GeForce Experience软件的设置-&gt;SHIELD-&gt;GAMESTREAM，将该选线打开，这样便打开了驱动的串流功能，而在手机上，我们只需要下载安装moonlight，通过它就能接收电脑串流过来的画面了，最后还要准备个拉伸的安卓手柄，可以夹住手机，这样就更像switch（其实就是心理作用）。那么硬件软件都准备好了，接下来就开始正式实现吧！</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>此处用的wiiU模拟器是cemu，我下载的版本是已经整合了游戏以及游戏图形包的版本，<a href="http://game.ali213.net/thread-6247297-1-1.html" target="_blank" rel="noopener">下载地址在此。</a>而模拟器的使用方法下载页面有很详细的教程，在此不赘述，要想串流需确保下载的这个版本cemu在自己电脑上能加载游戏缓存，并能成功进入游戏，因为是要利用英伟达显卡驱动的串流功能（要把显卡驱动更新到最新版），所以需要打开NVIDIA GeForce Experience软件的设置-&gt;SHIELD-&gt;GAMESTREAM，将该选线打开，这样便打开了驱动的串流功能，而在手机上，我们只需要下载安装moonlight，通过它就能接收电脑串流过来的画面了，最后还要准备个拉伸的安卓手柄，可以夹住手机，这样就更像switch（其实就是心理作用）。那么硬件软件都准备好了，接下来就开始正式实现吧！</p>
 <h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><p>因为串流对于网络要求挺高的，为了确保良好的串流体验，我是用笔记本电脑连接手机的热点，确保手机和电脑在同一网络下，然后在电脑上按win+R键，输入cmd后按回车键打开cmd命令窗口。输入ipconfig后按回车键，此时会有两种情况发生，请对号入座，并做相应处理：</p>
 <ul>
 <li>有输出ip地址数据</li>
